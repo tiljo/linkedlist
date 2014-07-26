@@ -1,5 +1,5 @@
 #include"sbl.h"
-#include"assert.h"
+
 int GetNth(struct node* head, int index)
 {
 	int number=0,i;

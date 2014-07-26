@@ -1,11 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<assert.h>
 struct node{
 	int data;
 	struct node* next;
 };
 
-int length(struct node* head)
+int Length(struct node* head)
 {
 	struct node* current= head;
 	int count=0;
