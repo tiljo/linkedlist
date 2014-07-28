@@ -21,13 +21,13 @@ int Length(struct node* head)
 struct node* BuildOneTwoThree()
 {
 	struct node* head= malloc(sizeof(struct node));
-	head->data =1;
-	head->next= malloc(sizeof(struct node));
+	head->data =3;
+	head->next=malloc(sizeof(struct node));
 	
-	head->next->data=2;
+	head->next->data=1;
 	head->next->next= malloc(sizeof(struct node));
 	
-	head->next->next->data=3;
+	head->next->next->data=2;
 	head->next->next->next=NULL;
 	
 	return head;

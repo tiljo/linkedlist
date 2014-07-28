@@ -4,16 +4,21 @@ void SortedInsert(struct node** headRef, struct node* newNode)
 {
         struct node** store = headRef;
         struct node** prev = headRef;
-        while( ((*store)->data) <= (newNode->data)){
-                prev = store;
-                store = &((*store)->next);
-                if((*store)== NULL){
-                        break;
-                }
-        }
-        newNode->next = (*store);
-        (*prev)->next = newNode;
-	printf("Working\n");
+
+       	if((*headRef) != NULL){
+		 while( ((*store)->data) <= (newNode->data)){
+        	        prev = store;
+                	store = &((*store)->next);
+	                if((*store)== NULL){
+        	                break;
+                	}
+	        }
+        	newNode->next = (*store);
+	        (*prev)->next = newNode;
+		printf("Working\n");
+	}
+	else
+		*headRef = newNode;
 }
 
 void InsertSort(struct node** headRef)
@@ -30,7 +35,7 @@ void InsertSort(struct node** headRef)
 		newnode->next = NULL;
                 SortedInsert(headRef, newnode);
 		printf("new is %d\n",current->data);
-                newstore = &(current);
+                newstore = &(current->next);
 		if((*newstore) == NULL)
 			break;
 	}
