@@ -28,12 +28,12 @@ struct node* BuildOneTwoThree()
 	head->next->next = malloc(sizeof(struct node));
 	
 	head->next->next->data = 3;
-	head->next->next->next= NULL;//malloc(sizeof(struct node));
+	head->next->next->next= malloc(sizeof(struct node));
 
-	/*head->next->next->next->data = 3;
-	head->next->next->next->next = malloc(sizeof(struct node));
+	head->next->next->next->data = 4;
+	head->next->next->next->next = NULL;//malloc(sizeof(struct node));
 
-	head->next->next->next->next->data = 4;
+/*	head->next->next->next->next->data = 4;
 	head->next->next->next->next->next = NULL;*/
 	
 	
