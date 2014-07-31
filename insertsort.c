@@ -1,40 +1,5 @@
-#include "sbl.h"
 
-void SortedInsert(struct node** headRef, struct node* newNode)
-{
-        struct node** store = headRef;
-        struct node** prev = headRef;
-        if(((*headRef) != NULL) && ((*store)->data) <= (newNode->data)) {
-                 while( ((*store)->data) <= (newNode->data)){
-                        prev = store;
-                        store = &((*store)->next);
-                        if((*store)== NULL){
-                                break;
-                        }
-                }
-		
-                newNode->next = (*store);
-                (*prev)->next = newNode;
-        }
-        else{
-		newNode->next = *headRef;
-                *headRef = newNode;
-	}
-/*	printf("hed dat	%d\n",(*headRef)->data);
-	if((*headRef)->next != NULL){
-		printf("hed2	%d\n",(*headRef)->next->data);
-	}
-
-//	assert((*headRef)->next->next == NULL);
-		printf("heddat	%d\n\n",(*headRef)->data);*/
-	
-
-}
-
-
-void InsertSort(struct node** headRef)
-{
- 	struct node** temp = headRef;
+	/*struct node** temp = headRef;
  	struct node* stemp;
  	struct node* semp;
 	struct node** newstore = temp;
@@ -68,44 +33,3 @@ void InsertSort(struct node** headRef)
 
 
 
-        }
-}
-
-
-int main()
-{
-
-        struct node* head = BuildOneTwoThree();
-
-        InsertSort(&head);
-        printf(" ditto %d\n",head->data);
-//        printf(" ditto %d\n",head->next->data);
-  //      printf(" ditto %d\n",head->next->next->data);
-        return 0;
-}
-
-/*int main()
-{
-	 struct node* head =BuildOneTwoThree();
-         struct node* newNode = malloc(sizeof(struct node));
-         struct node* new_Node = malloc(sizeof(struct node));
-        newNode->data = 12;
-        newNode->next = NULL;
-	 SortedInsert(&head,newNode);
-	 printf(" ditto %d\n",head->data);
-        printf(" ditto %d\n",head->next->data);
-        printf(" ditto %d\n",head->next->next->data);
-        printf(" ditto %d\n",head->next->next->next->data);
-	printf("\n");
-	new_Node->data = 5;
-        new_Node->next = NULL;
-	SortedInsert(&head,new_Node);
-
-
-	printf(" ditto %d\n",head->data);
-        printf(" ditto %d\n",head->next->data);
-        printf(" ditto %d\n",head->next->next->data);
-        printf(" ditto %d\n",head->next->next->next->data);
-        printf(" ditto %d\n",head->next->next->next->next->data);
-        return 0;
-}*/

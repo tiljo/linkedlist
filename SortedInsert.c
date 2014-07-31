@@ -39,7 +39,6 @@ void SortedInsert(struct node** headRef, struct node* newNode)
                 }
                 newNode->next = (*store);
                 (*prev)->next = newNode;
-                printf("Working\n");
         }
         else{
                 newNode->next = *headRef;
