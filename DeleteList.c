@@ -1,4 +1,4 @@
-#include "sbl.h"
+//#include "sbl.h"
 
 void DeleteList(struct node** headRef)
 {
@@ -10,20 +10,20 @@ void DeleteList(struct node** headRef)
 	(*headRef)=NULL;
 }
 
-void DeleteListTest()
+/*void DeleteListTest()
 {
 
 	struct node* myList = BuildOneTwoThree();
 	DeleteList(&myList);
-}
+}*/
 
-int main()
+/*int main()
 {
 	//here the commanded portion can be used for testing
-	/*struct node* myself=BuildOneTwoThree();
+	struct node* myself=BuildOneTwoThree();
 	DeleteList(&myself);
 	assert(myself != NULL);
-	printf("%d\n", myself->next->next->data);*/
+	printf("%d\n", myself->next->next->data);
 	DeleteListTest();
 	return 0;
-}
+}*/
