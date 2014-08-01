@@ -13,21 +13,23 @@ void MoveNode(struct node** destRef, struct node** sourceRef)
 	*sourceRef=temp;
 }
 
-int main()
+/*int main()
 {
 
 	struct node* source = BuildOneTwoThree();
 	struct node* dest = BuildOneTwoThree();
 
 	MoveNode(&dest, &source);
+	MoveNode(&dest, &source);
 	printf("%d\n",dest->data);
 	printf("%d\n",dest->next->data);
 	printf("%d\n",dest->next->next->data);
 	printf("%d\n",dest->next->next->next->data);
+	printf("%d\n",dest->next->next->next->next->data);
 	printf("\n");
 	printf("%d\n",source->data);
 	printf("%d\n",source->next->data);
 	
 	return 0;
-}
+}*/
 	

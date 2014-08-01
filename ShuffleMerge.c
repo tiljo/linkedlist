@@ -13,23 +13,21 @@ struct node* ShuffleMerge(struct node* a, struct node* b)
 		return b;
 
 	while(trace !=NULL){
+		
 		if(trace != a){
 			*prev = trace;
 			prev = &(trace->next);
 			trace = trace->next;
 		}
-		else{
-			trace = trace->next;
-		}
+		else	trace = trace->next;
 
+		
 		if(btrace != NULL){
 			*prev = btrace;
 			prev = &(btrace->next);
 			btrace = btrace->next;
 		}
-		else{
-			break;
-		}
+		else	break;
 	}
 	return a;
 }
